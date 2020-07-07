@@ -1,0 +1,42 @@
+data:
+  bands:
+    160m:
+      0:
+        label: SLOPE VERT
+      1:
+        label: BEV
+
+    80m:
+      2:
+        label: DIPOLE
+      3:
+        label: BEV
+
+    40m:
+      4:
+        label: NW
+      5:
+        label: NE+NW
+      6:
+        label: NE
+    20m:
+      7:
+        label: NW
+      8:
+        label: NE+NW
+      9:
+        label: NE
+    15m:
+      10:
+        label: NW
+      11:
+        label: NE+NW
+      12:
+        label: NE
+    10m:
+      13:
+        label: NW
+      14:
+        label: NE+NW
+      15:
+        label: NE
