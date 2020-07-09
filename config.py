@@ -10,7 +10,13 @@ class Config:
         # return cfg["data"]["bands"]
 
     def bands(self):
-        return self.cfg["data"]["bands"]
+        return self.cfg["config"]["bands"]
+
+    def defaults(self):
+        return self.cfg["config"]["default_on"]
+
+    def com_port(self):
+        return self.cfg["config"]["com_port"]
 
 
 # appData = Data()

@@ -25,16 +25,22 @@ class Data:
     }
 
     bands = Config().bands()
+    defaults = Config().defaults()
+    com_port = Config().com_port()
 
 
 
 
 
 class Relay:
-    def allOff():
-        for i in Data.state:
-            serialCtl.off(i)
-            Data.state[i] = False
+    def setup():
+        for relay in Data.state:
+            if relay in Data.defaults:
+                serialCtl.on(relay)
+                Data.state[relay] = True
+            else:
+                serialCtl.off(relay)
+                Data.state[relay] = False
 
     def bandOff(band):
         for relay in Data.bands[band]:
@@ -50,7 +56,7 @@ class Relay:
 
 
 class serialCtl:
-    portName = "/dev/tty.usbmodem14201"
+    portName = Data.com_port
 
     def relayIndex(index):
         if (int(index) < 10):
@@ -71,14 +77,4 @@ class serialCtl:
 
 
 
-
-
-
-
-
-
-appData = Data
-for band in appData.bands:
-    print(band)
-    for relay in appData.bands[band]:
-        print(relay)
+Relay.setup()

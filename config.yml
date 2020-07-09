@@ -1,4 +1,6 @@
-data:
+config:
+  com_port: "/dev/tty.usbmodem14101"
+  default_on: [0,2,5,8,11,14]
   bands:
     160m:
       0:
