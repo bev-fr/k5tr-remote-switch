@@ -29,6 +29,9 @@ def button_list():
             resp = resp + (button(band, relay, Data.bands[band][relay]["label"]))
     return resp
 
+
+
+
 @app.route('/alloff')
 def forceRead():
     Relay.allOff()
@@ -39,6 +42,8 @@ def index(band, index):
     Relay.switchOn(band, index)
     return redirect(url_for('home'))
 
+
+
 @app.route("/")
 def home():
     now = datetime.datetime.now()
@@ -47,6 +52,9 @@ def home():
       'time': timeString,
       'button_list': button_list()
     }
+
+
+
     return render_template('index.html', **templateData)
 
 if __name__ == "__main__":

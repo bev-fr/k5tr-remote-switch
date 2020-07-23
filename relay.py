@@ -1,5 +1,4 @@
-import sys
-import serial
+
 
 from config import Config
 
@@ -26,9 +25,9 @@ class Data:
 
     bands = Config().bands()
     defaults = Config().defaults()
+    mcp_board_list = Config().mcp_board_list()
     com_port = Config().com_port()
-
-
+    relays = Config().relays()
 
 
 
@@ -53,27 +52,35 @@ class Relay:
         Data.state[index] = True
         return None
 
+    class Control:
+        def on(addres):
+            board = Data.mcp_board_list[addres[0]]
+            mcp.Adafruit_MCP230XX(busnum = 1, address = board, num_gpios = 16)
+            mcp.output(addres[0], 1)
 
 
-class serialCtl:
-    portName = Data.com_port
+        def off(addres):
+            board = Data.mcp_board_list[addres[0]]
+            mcp.Adafruit_MCP230XX(busnum = 1, address = board, num_gpios = 16)
+            mcp.output(addres[0], 0)
 
-    def relayIndex(index):
-        if (int(index) < 10):
-            return str(index)
-        else:
-            return chr(55 + int(index))
 
-    def write(index, state):
-        serPort = serial.Serial(serialCtl.portName, 19200, timeout=1)
-        serPort.write(str.encode("relay "+ str(state) + serialCtl.relayIndex(index) + "\n\r"))
-        serPort.close()
+        def __init__(self):
+            # Initialize the I2C bus and all pins
+            for relay in Data.relays:
+                board = Data.mcp_board_list[relay[0]]
+                mcp = Adafruit_MCP230XX(busnum = 1, address = board, num_gpios = 16)
+                mcp.config(relay[1], OUTPUT)
 
-    def on(index):
-        serialCtl.write(index, "on ")
+                # Create an instance of either the MCP23008 or MCP23017 class depending on
+                # which chip you're using:
+                # Use busnum = 0 for older Raspberry Pi's (256MB)
+                # Use busnum = 1 for new Raspberry Pi's (512MB with mounting holes)
+                # mcp = Adafruit_MCP230XX(busnum = 1, address = 0x20, num_gpios = 16)
 
-    def off(index):
-        serialCtl.write(index, "off ")
+
+
+
 
 
 
