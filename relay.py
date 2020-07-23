@@ -53,17 +53,15 @@ class Relay:
         return None
 
     class Control:
-        def on(addres):
+        def write(addres, state):
             board = Data.mcp_board_list[addres[0]]
             mcp.Adafruit_MCP230XX(busnum = 1, address = board, num_gpios = 16)
-            mcp.output(addres[0], 1)
-
+            mcp.output(addres[0], state)
+        def on(addres):
+            self.write(addres, 1)
 
         def off(addres):
-            board = Data.mcp_board_list[addres[0]]
-            mcp.Adafruit_MCP230XX(busnum = 1, address = board, num_gpios = 16)
-            mcp.output(addres[0], 0)
-
+            self.write(addres, 0)
 
         def __init__(self):
             # Initialize the I2C bus and all pins
