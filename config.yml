@@ -1,26 +1,39 @@
 config:
-  com_port: "/dev/tty.usbmodem14201"
-
   mcp_board_list:
     - 0x20
     - 0x21
 
-  default_on: [0,2,5,8,11,14]
+  default_on:
+    - [0,1]
+    - [0,2]
+    - [0,4]
+    - [0,6]
+    - [0,8]
+    - [0,10]
+    - [0,12]
+    - [0,14]
 
   bands:
+    RX:
+      -
+        label: BEV 1
+        address: [1,1]
+      -
+        label: BEV 3
+        address: [1,2]
     160m:
       -
         label: SLOPE VERT
         address: [0,0]
       -
-        label: BEV
+        label: B
         address: [0,1]
     80m:
       -
         label: DIPOLE
         address: [0,2]
       -
-        label: BEV
+        label: B
         address: [0,3]
     40m:
       -
@@ -42,17 +55,23 @@ config:
       -
         label: NE
         address: [0,9]
-    # 15m:
-    #   10:
-    #     label: NW
-    #   11:
-    #     label: NE+NW
-    #   12:
-    #     label: NE
-    # 10m:
-    #   13:
-    #     label: NW
-    #   14:
-    #     label: NE+NW
-    #   15:
-    #     label: NE
+    15m:
+      -
+        label: NW
+        address: [0,10]
+      -
+        label: NE+NW
+        address: [0,11]
+      -
+        label: NE
+        address: [0,12]
+    10m:
+      -
+        label: NW
+        address: [0,13]
+      -
+        label: NE+NW
+        address: [0,14]
+      -
+        label: NE
+        address: [0,15]

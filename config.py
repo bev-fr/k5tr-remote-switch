@@ -1,29 +1,31 @@
 import yaml
+import re
 
 
 
 class Config:
     cfg = None
     def __init__(self):
+
+        #load the config
         with open("config.yml", "r") as ymlfile:
-            self.cfg = yaml.load(ymlfile)
-        # return cfg["data"]["bands"]
+            self.cfg = yaml.safe_load(ymlfile)
 
     def bands(self):
         return self.cfg["config"]["bands"]
 
     def defaults(self):
-        return self.cfg["config"]["default_on"]
+        defaults = []
+        for address in self.cfg["config"]["default_on"]:
+            defaults.append(tuple(address))
+        return defaults
 
-    def com_port(self):
-        return self.cfg["config"]["com_port"]
+    def mcp_board_list(self):
+        return self.cfg["config"]["mcp_board_list"]
 
-
-# appData = Data()
-#
-# print(appData.bands())
-#
-# for band in appData.bands():
-#     print(band)
-#     for relay in appData.bands()[band]:
-#         print(relay)
+    def relays(self):
+        relays = []
+        for band in self.cfg["config"]["bands"]:
+            for relay in self.cfg["config"]["bands"][band]:
+                relays.append((tuple(relay["address"])))
+        return relays
