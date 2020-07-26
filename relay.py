@@ -1,5 +1,8 @@
 from config import Config
-#https://learn.adafruit.com/mcp230xx-gpio-expander-on-the-raspberry-pi/using-the-library
+import board
+import busio
+from adafruit_mcp230xx.mcp23017 import MCP23017
+
 
 class Data:
     config = Config()
@@ -41,39 +44,27 @@ class Relay:
 
 
 
-
-
 class Control:
+    mcpArray = []
+    pins = {}
+    def write(self, address, state):
+        self.pins[address].value = state
+
+
     def on(self, address):
-        print("on")
-        print(address)
+        self.write(address, False)
 
     def off(self, address):
-        print("off")
-        print(address)
+        self.write(address, True)
 
     def __init__(self):
-        print("init")
-    # class Control:
-    #     mcpArray = []
-    #     def write(address, state):
-    #         board = Data.mcp_board_list[address[0]]
-    #         board.output(address[0], state)
-    #
-    #     def on(address):
-    #         self.write(address, 1)
-    #
-    #     def off(address):
-    #         self.write(address, 0)
-    #
-    #     def __init__(self):
-    #         # Initialize the I2C bus and all pins
-    #         for board in Data.mcp_board_list:
-    #             self.mcpArray.append( Adafruit_MCP230XX(busnum = 1, address = board, num_gpios = 16))
-    #         for address in Data.relays:
-    #             self.mcpArray[address[0]].config(address[2], OUTPUT)
-    #             # Create an instance of either the MCP23008 or MCP23017 class depending on
-    #             # which chip you're using:
-    #             # Use busnum = 0 for older Raspberry Pi's (256MB)
-    #             # Use busnum = 1 for new Raspberry Pi's (512MB with mounting holes)
-    #             # mcp = Adafruit_MCP230XX(busnum = 1, address = 0x20, num_gpios = 16)
+
+        i2c = busio.I2C(board.SCL, board.SDA)
+        # Initialize the I2C bus and all pins
+        for i2cAddr in Data.mcp_board_list:
+            mcp = MCP23017(i2c, address=i2cAddr)
+            self.mcpArray.append(mcp)
+
+        for address in Data.relays:
+            self.pins[address] = self.mcpArray[address[0]].get_pin(address[1])
+            self.pins[address].switch_to_output(value=True)

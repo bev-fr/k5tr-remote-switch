@@ -2,6 +2,8 @@ config:
   mcp_board_list:
     - 0x20
     - 0x21
+    - 0x22
+    - 0x23
 
   default_on:
     - [0,0]
