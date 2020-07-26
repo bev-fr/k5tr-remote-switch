@@ -22,7 +22,7 @@ config:
         address: [2,0]
       -
         label: NW + NE BEV
-        address: [2,1]	
+        address: [2,1]
       -
         label: NE BEV
         address: [2,2]
@@ -52,7 +52,7 @@ config:
         address: [0,4]
       -
         label: NE Sloper
-        address: [0,5]	
+        address: [0,5]
     40m:
       -
         label: NW
@@ -91,6 +91,7 @@ config:
         address: [1,1]
       -
         label: NE+NW
+
         address: [1,2]
       -
         label: NE
@@ -132,4 +133,4 @@ config:
         address: [1,14]
       -
         label: W
-        address: [1,15]     
+        address: [1,15]
