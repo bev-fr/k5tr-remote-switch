@@ -117,7 +117,7 @@ config:
       -
         label: W
         address: [1,10]
-     6m:
+    6m:
       -
         label: NW
         address: [1,11]

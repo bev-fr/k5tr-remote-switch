@@ -50,7 +50,6 @@ class Control:
     def write(self, address, state):
         self.pins[address].value = state
 
-
     def on(self, address):
         self.write(address, False)
 
@@ -58,7 +57,6 @@ class Control:
         self.write(address, True)
 
     def __init__(self):
-
         i2c = busio.I2C(board.SCL, board.SDA)
         # Initialize the I2C bus and all pins
         for i2cAddr in Data.mcp_board_list:
