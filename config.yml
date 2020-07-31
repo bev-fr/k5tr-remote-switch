@@ -16,7 +16,7 @@ config:
 #    - [1,15]
 
   bands:
-    RX Beverages:
+    RX_Beverages:
       -
         label: NW
         address: [2,4]
