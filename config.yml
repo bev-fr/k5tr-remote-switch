@@ -61,7 +61,7 @@ config:
         label: NW
         address: [0,11]
       -
-        label: NE+NW
+        label: NW+NE
         address: [0,12]
       -
         label: NE
@@ -77,7 +77,7 @@ config:
         label: NW
         address: [0,15]
       -
-        label: NE+NW
+        label: NW+NE
         address: [1,0]
       -
         label: NE
@@ -96,7 +96,7 @@ config:
         label: NW
         address: [1,5]
       -
-        label: NE+NW
+        label: NW+NE
         address: [1,6]
       -
         label: NE
@@ -118,7 +118,7 @@ config:
         label: NW
         address: [1,9]
       -
-        label: NE+NW
+        label: NW+NE
         address: [1,10]
       -
         label: NE
