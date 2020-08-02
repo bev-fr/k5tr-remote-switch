@@ -106,29 +106,29 @@ config:
         address: [1,8]
 #      -
 #        label: W
-#        address: [1,7]
-      -
-        label: ALL
-        address: [1,4]
+#        address: [1,9]
+#      -
+#        label: ALL
+#        address: [1,4]
     10m:
 #      -
 #        label: ALL
-#        address: [1,8]
+#        address: [1,10]
       -
         label: NW
-        address: [1,9]
-      -
-        label: NW+NE
-        address: [1,10]
-      -
-        label: NE
         address: [1,11]
       -
-        label: SE
+        label: NW+NE
         address: [1,12]
       -
-        label: NE 120'
+        label: NE
         address: [1,13]
+      -
+        label: SE
+        address: [1,14]
+      -
+        label: NE 120'
+        address: [1,15]
 #    6m:
 #      -
 #        label: ALL
