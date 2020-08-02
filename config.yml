@@ -116,19 +116,19 @@ config:
 #        address: [1,10]
       -
         label: NW
-        address: [1,11]
-      -
-        label: NW+NE
         address: [1,12]
       -
-        label: NE
+        label: NW+NE
         address: [1,13]
       -
-        label: SE
+        label: NE
         address: [1,14]
       -
-        label: NE 120'
+        label: SE
         address: [1,15]
+      -
+        label: NE 120'
+        address: [2,0]
 #    6m:
 #      -
 #        label: ALL
