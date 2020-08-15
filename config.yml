@@ -118,7 +118,7 @@ config:
         label: NW
         address: [1,12]
       -
-        label: NW+NE
+        label: NW+SE
         address: [1,13]
       -
         label: NE
