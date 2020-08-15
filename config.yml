@@ -118,14 +118,14 @@ config:
         label: NW
         address: [1,12]
       -
-        label: NW+NE
+        label: NW+SE
         address: [1,13]
       -
         label: NE
-        address: [1,14]
+        address: [1,15]
       -
         label: SE
-        address: [1,15]
+        address: [1,14]
       -
         label: NE 120'
         address: [2,0]
