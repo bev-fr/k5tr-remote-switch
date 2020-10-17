@@ -28,10 +28,10 @@ config:
         address: [0,2]
       -
         label: SE
-        address: [0,3]
-      -
-        label: SW
         address: [0,4]
+#      -
+#        label: SW
+#        address: [0,4]
 
     160m:
       -
