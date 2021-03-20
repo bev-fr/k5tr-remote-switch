@@ -7,12 +7,12 @@ config:
 
   default_on:
     - [0,1]
-    - [0,6]
-    - [0,11]
+#    - [0,6]
+#    - [0,11]
     - [0,15]
     - [1,0]
     - [1,6]
-    - [1,13]
+#    - [1,13]
 #    - [1,15]
 
   bands:
@@ -74,23 +74,23 @@ config:
 #        address: [0,11]
     20m:
       -
-        label: NE
+        label: NW
         address: [0,15]
-#      -
-#        label: NW+NE
-#        address: [1,0]
-#      -
-#        label: NE
-#        address: [1,1]
+      -
+        label: NW+NE
+        address: [1,0]
+      -
+        label: NE
+        address: [1,1]
       -
         label: SE
         address: [1,3]
       -
-        label: NW
+        label: NW 40ft
         address: [1,2]
-#      -
-#        label: ALL
-#        address: [0,14]
+      -
+        label: ALL
+        address: [0,14]
     15m:
       -
         label: NW
@@ -110,22 +110,22 @@ config:
 #      -
 #        label: ALL
 #        address: [1,4]
-    10m:
+#    10m:
 #      -
 #        label: ALL
 #        address: [1,10]
-      -
-        label: NW
-        address: [1,12]
-      -
-        label: NW+SE
-        address: [1,13]
-      -
-        label: NE
-        address: [1,15]
-      -
-        label: SE
-        address: [1,14]
+#      -
+#        label: NW
+#        address: [1,12]
+#      -
+#        label: NW+SE
+#        address: [1,13]
+#      -
+#        label: NE
+#        address: [1,15]
+#      -
+#        label: SE
+#        address: [1,14]
 #      -
 #        label: NE 120'
 #        address: [2,0]
