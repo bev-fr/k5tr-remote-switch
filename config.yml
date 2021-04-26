@@ -60,13 +60,13 @@ config:
       -
         label: DIPOLE
         address: [0,11]
-#      -
-#        label: NW+NE
-#        address: [0,12]
-#      -
-#        label: NE
-#        address: [0,13]
-#      -
+      -
+        label: NW+NE
+        address: [0,12]
+      -
+        label: NE
+        address: [0,13]
+      -
 #        label: SE
 #        address: [0,10]
 #      -
