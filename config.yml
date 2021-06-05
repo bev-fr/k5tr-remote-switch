@@ -52,7 +52,7 @@ config:
 #        address: [0,9]
       -
         label: NE
-#        address: [0,10]
+        address: [0,10]
     40m:
 #      -
 #        label: ALL
