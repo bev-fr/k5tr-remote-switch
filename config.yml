@@ -50,8 +50,8 @@ config:
 #      -
 #        label: NW + NE
 #        address: [0,9]
-#      -
-#        label: NE
+      -
+        label: NE
 #        address: [0,10]
     40m:
 #      -
