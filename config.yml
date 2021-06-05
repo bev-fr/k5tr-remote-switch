@@ -43,7 +43,7 @@ config:
 #      -
 #        label: NE
 #        address: [0,7]
-#    80m:
+    80m:
 #      -
 #        label: NW
 #        address: [0,8]
