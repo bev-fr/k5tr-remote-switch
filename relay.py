@@ -13,6 +13,8 @@ class Data:
     bands = config.bands()
     defaults = config.defaults()
     mcp_board_list = config.mcp_board_list()
+
+    #an array of relays
     relays = config.relays()
 
     def __init__(self, relayCtl):
@@ -45,8 +47,10 @@ class Relay:
 
 
 class Control:
+    # Initialize some vars
     mcpArray = []
     pins = {}
+
     def write(self, address, state):
         self.pins[address].value = state
 
@@ -57,12 +61,15 @@ class Control:
         self.write(address, True)
 
     def __init__(self):
+        # Initialize IC2
         i2c = busio.I2C(board.SCL, board.SDA)
+
         # Initialize the I2C bus and all pins
         for i2cAddr in Data.mcp_board_list:
             mcp = MCP23017(i2c, address=i2cAddr)
             self.mcpArray.append(mcp)
 
+        # Initialize
         for address in Data.relays:
             self.pins[address] = self.mcpArray[address[0]].get_pin(address[1])
             self.pins[address].switch_to_output(value=True)
