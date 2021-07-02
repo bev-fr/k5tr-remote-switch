@@ -10,7 +10,7 @@ config:
 #    - [0,6]
     - [0,10]
     - [0,12]
-    - [0,15]
+    - [1,0]
     - [1,6]
     - [1,15]
 #    - [1,15]
@@ -76,12 +76,12 @@ config:
       -
         label: NW
         address: [0,15]
-#      -
-#        label: NW+NE
-#        address: [1,0]
-#      -
- #       label: NE
- #       address: [1,1]
+      -
+        label: NW+NE
+        address: [1,0]
+      -
+       label: NE
+       address: [1,1]
       -
         label: SE
         address: [1,3]
