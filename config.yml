@@ -12,7 +12,7 @@ config:
     - [0,12]
     - [1,0]
     - [1,6]
-    - [1,15]
+    - [1,10]
 #    - [1,15]
 
   bands:
@@ -117,9 +117,6 @@ config:
       -
         label: NW
         address: [1,12]
-      -
-        label: NW+SE
-        address: [1,13]
       -
         label: NE
         address: [1,15]
