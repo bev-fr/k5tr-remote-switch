@@ -6,7 +6,7 @@ config:
     - 0x23
 
   default_on:
-#    - [0,1]
+    - [0,2]
     - [0,6]
     - [0,9]
     - [0,12]
@@ -16,19 +16,19 @@ config:
 #    - [1,15]
 
   bands:
-#    RX_Beverages:
+    RX_Beverages:
 #      -
 #        label: NW
 #        address: [0,0]
 #      -
 #        label: NW + NE
 #        address: [0,1]
-#      -
-#        label: NE
-#        address: [0,2]
-#      -
-#        label: SE
-#        address: [0,4]
+      -
+        label: NE
+        address: [0,2]
+      -
+        label: SE
+        address: [0,4]
 #      -
 #        label: SW
 #        address: [0,4]
