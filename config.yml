@@ -47,9 +47,9 @@ config:
       -
         label: NW
         address: [0,8]
-      -
-        label: NW + NE
-        address: [0,9]
+#      -
+#       label: NW + NE
+#       address: [0,9]
       -
         label: NE
         address: [0,10]
@@ -58,13 +58,13 @@ config:
 #        label: ALL
 #        address: [0,6]
       -
-        label: DIPOLE
+        label: NE 2 ele
         address: [0,11]
       -
         label: NW+NE
         address: [0,12]
       -
-        label: NE
+        label: NE 4 ele
         address: [0,13]
 #      -
 #        label: SE
