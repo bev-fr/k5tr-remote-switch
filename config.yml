@@ -58,7 +58,7 @@ config:
 #        label: ALL
 #        address: [0,6]
       -
-        label: NE 2 ele
+        label: NW 2 ele
         address: [0,11]
       -
         label: NW+NE
@@ -82,9 +82,9 @@ config:
       -
        label: NE
        address: [1,1]
-      -
-        label: SE
-        address: [1,3]
+#      -
+#       label: SE
+#       address: [1,3]
 #      -
 #        label: NW 40ft
 #        address: [1,2]
