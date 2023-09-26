@@ -58,13 +58,13 @@ config:
 #        label: ALL
 #        address: [0,6]
       -
-        label: NW 2 ele
+        label: NE 2 ele
         address: [0,11]
       -
-        label: NW+NE
+        label: West+NE
         address: [0,12]
       -
-        label: NE 4 ele
+        label: West 4 ele
         address: [0,13]
 #      -
 #        label: SE
@@ -74,13 +74,15 @@ config:
 #        address: [0,11]
     20m:
       -
-        label: NW
+        label: NE
+        # was NW
         address: [0,15]
       -
-        label: NW+NE
+        label: WEST+NE
         address: [1,0]
       -
-       label: NE
+       label: WEST
+       # was NE
        address: [1,1]
 #      -
 #       label: SE
@@ -124,7 +126,8 @@ config:
         label: SE
         address: [1,14]
       -
-        label: SW
+        label: EAST
+        # was SW - tall tower
         address: [2,0]
 #    6m:
 #      -
