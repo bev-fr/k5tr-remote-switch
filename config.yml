@@ -47,9 +47,9 @@ config:
 #      -
  #       label: NW
   #      address: [0,8]
-      -
-       label: NW + NE
-       address: [0,9]
+#      -
+ #      label: NW + NE
+  #     address: [0,9]
       -
         label: NE
         address: [0,10]
