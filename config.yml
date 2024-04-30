@@ -107,22 +107,22 @@ config:
 #      -
 #        label: ALL
 #        address: [1,4]
-    10m:
-      -
-        label: ALL
-        address: [1,10]
-      -
-        label: NW
-        address: [1,12]
-      -
-        label: NE
-        address: [1,15]
-      -
-        label: SE
-        address: [1,14]
-      -
-        label: SW
-        address: [2,0]
+#    10m:
+#      -
+#        label: ALL
+#        address: [1,10]
+#     -
+#        label: NW
+#        address: [1,12]
+#      -
+#       label: NE
+#        address: [1,15]
+#      -
+#        label: SE
+#        address: [1,14]
+#      -
+#        label: SW
+#        address: [2,0]
 #    6m:
 #      -
 #        label: ALL
