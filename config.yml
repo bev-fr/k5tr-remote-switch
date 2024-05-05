@@ -23,12 +23,12 @@ config:
 #      -
 #        label: NW + NE
 #        address: [0,1]
-      -
-        label: NE
-        address: [0,2]
-      -
-        label: SE
-        address: [0,4]
+ #     -
+ #       label: NE
+ #       address: [0,2]
+ #     -
+ #       label: SE
+ #       address: [0,4]
 #      -
 #        label: SW
 #        address: [0,4]
@@ -53,19 +53,19 @@ config:
 #       -
 #         label: NE
 #        address: [0,10]
-    40m:
+ #   40m:
 #      -
 #        label: ALL
 #        address: [0,6]
-      -
-        label: NW 2 ele
-        address: [0,11]
-      -
-        label: NW+NE
-        address: [0,12]
-      -
-        label: NE 4 ele
-        address: [0,13]
+      # -
+      #   label: NW 2 ele
+      #   address: [0,11]
+      # -
+      #   label: NW+NE
+      #   address: [0,12]
+      # -
+      #   label: NE 4 ele
+ #       address: [0,13]
 #      -
 #        label: SE
 #        address: [0,10]
