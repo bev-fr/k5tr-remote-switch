@@ -73,12 +73,12 @@ config:
 #        label: W
 #        address: [0,11]
     20m:
-      -
-        label: NW
-        address: [0,15]
-      -
-        label: NW+NE
-        address: [1,0]
+  #    -
+  #      label: NW
+  #      address: [0,15]
+  #    -
+  #      label: NW+NE
+  #      address: [1,0]
       -
        label: NE
        address: [1,1]
